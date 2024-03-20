@@ -4,7 +4,7 @@ const formatPrice = (price) => {
   if (price !== undefined && price !== null) {
     return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
-  return ""; 
+  return "";
 };
 
 export default function Collection({ product }) {
@@ -35,7 +35,7 @@ export default function Collection({ product }) {
                           {product.description}
                         </p>
                         <p className="mt-4 text-lg mb-10 text-primary">
-                          $ {formatPrice(product.price)}
+                          Rs {formatPrice(product.price)}
                         </p>
                       </header>
                       <Link
@@ -48,28 +48,27 @@ export default function Collection({ product }) {
                   </div>
 
                   <div className="lg:col-span-2 lg:py-8 ">
-  <div className="flex">
-    <div className="w-1/2 mr-4">
-      <div className="block group ">
-        <img
-          src={product.images[0]}
-          alt=""
-          className="object-cover w-full rounded aspect-square relative h-[300px] sm:h-[300px]"
-        />
-      </div>
-    </div>
-    <div className="w-1/2">
-      <div className="block group">
-        <img
-          src={product.images[1]}
-          alt=""
-          className="object-cover w-full rounded aspect-square relative h-[300px] sm:h-[300px]"
-        />
-      </div>
-    </div>
-  </div>
-</div>
-
+                    <div className="flex">
+                      <div className="w-1/2 mr-4">
+                        <div className="block group ">
+                          <img
+                            src={product.images[0]}
+                            alt=""
+                            className="object-cover w-full rounded aspect-square relative h-[300px] sm:h-[300px]"
+                          />
+                        </div>
+                      </div>
+                      <div className="w-1/2">
+                        <div className="block group">
+                          <img
+                            src={product.images[1]}
+                            alt=""
+                            className="object-cover w-full rounded aspect-square relative h-[300px] sm:h-[300px]"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

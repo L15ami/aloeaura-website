@@ -136,7 +136,7 @@ export default function Cart() {
 
                               <dl className="mt-0.5 space-y-px text-[10px] text-text">
                                 <p>
-                                  $ 
+                                  Rs
                                   {cartProducts.filter(
                                     (id) => id === product._id
                                   ).length * product.price}
@@ -192,17 +192,17 @@ export default function Cart() {
                         </div>
                         <div className="flex justify-between">
                           <dt>Subtotal</dt>
-                          <dd>$ {formatPrice(total)}</dd>
+                          <dd>Rs {formatPrice(total)}</dd>
                         </div>
 
                         <strike className="flex justify-between">
                           <dt>VAT</dt>
-                          <dd>$ {formatPrice(total / 1000)}</dd>
+                          <dd>Rs {formatPrice(total / 1000)}</dd>
                         </strike>
 
                         <div className="flex justify-between !text-base font-medium">
                           <dt>Total</dt>
-                          <dd>$ {formatPrice(total)}</dd>
+                          <dd>Rs {formatPrice(total)}</dd>
                         </div>
                       </dl>
 

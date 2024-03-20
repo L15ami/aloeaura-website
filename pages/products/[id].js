@@ -55,7 +55,13 @@ export default function ProductPage({ product }) {
                 {product?.details}
               </p>
             </div>
-           
+
+            <div className="mt-4 flex justify-between items-center">
+              <h2 className="text-xl font-semibold text-gray-900">Price</h2>
+              <p className="mt-2 text-primary font-semibold text-lg">
+                $ {formatPrice(product.price)}
+              </p>
+            </div>
             <div className="w-full">
               <button
                 className="bg-primary text-white py-2 px-4 mt-4 rounded-md hover:bg-primary-dark w-full"

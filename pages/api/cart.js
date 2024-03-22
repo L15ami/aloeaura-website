@@ -6,7 +6,7 @@ export default async function handle(req, res) {
   const ids = req.body.ids;
 
   try {
-    const products = await Product.find({ _id: { Rsin: ids } });
+    const products = await Product.find({ _id: { $in: ids } });
     res.json(products);
   } catch (error) {
     console.error("Error:", error);

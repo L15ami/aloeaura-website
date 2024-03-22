@@ -19,7 +19,7 @@ export default function App({
       <SessionProvider session={session}>
         <CartContextProvider>
           <main
-            className={`Rs{inter.className} min-h-screen max-w-screen-2xl mx-auto bg-background sm:px-6`}
+            className={`${inter.className} min-h-screen max-w-screen-2xl mx-auto bg-background sm:px-6`}
           >
             <Header />
             <Toaster position="top-center" />

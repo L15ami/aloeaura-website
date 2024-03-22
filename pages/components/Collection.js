@@ -35,7 +35,7 @@ export default function Collection({ product }) {
                           {product.description}
                         </p>
                         <p className="mt-4 text-lg mb-10 text-primary">
-                          Rs {formatPrice(product.price)}
+                          $ {formatPrice(product.price)}
                         </p>
                       </header>
                       <Link

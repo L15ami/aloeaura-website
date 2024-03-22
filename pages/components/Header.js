@@ -44,7 +44,9 @@ export default function Header() {
               <ul className="flex items-center gap-6 text-md">
                 <li>
                   <Link
-                    className={`text-accent transition hover:text-accent/75 Rs{pathname === '/' ? 'text-primary' : ""} `}
+                    className={`text-accent transition hover:text-accent/75 ${
+                      pathname === "/" ? "text-primary" : ""
+                    } `}
                     href="/"
                   >
                     Home
@@ -53,20 +55,37 @@ export default function Header() {
 
                 <li>
                   <Link
-                    className={`text-accent transition hover:text-accent/75 Rs{pathname === ('/products') ? 'text-primary' : ""} `}
+                    className={`text-accent transition hover:text-accent/75 ${
+                      pathname === "/products" ? "text-primary" : ""
+                    } `}
                     href="/products"
                   >
                     All Products
                   </Link>
                 </li>
 
-                {/* <li>
-                <select className={`text-accent transition hover:text-accent/75 Rs{pathname === ('/categories') ? 'text-primary' : ""} `} href="/categories">
-                  <option value="0">Categories</option>
-                  <option value="1"></option>
-                </select>
+                <li>
+                  <Link
+                    className={`text-accent transition hover:text-accent/75 ${
+                      pathname === "/about" ? "text-primary" : ""
+                    } `}
+                    href="/about"
+                  >
+                    About
+                  </Link>
+                </li>
 
-              </li> */}
+                <li>
+                  <Link
+                    className={`text-accent transition hover:text-accent/75 ${
+                      pathname === "/contact" ? "text-primary" : ""
+                    } `}
+                    href="/contact"
+                  >
+                    Contact Us
+                  </Link>
+                </li>
+
               </ul>
             </nav>
 
@@ -183,7 +202,9 @@ export default function Header() {
                     <ul className="flex flex-col items-start gap-6 text-md">
                       <li>
                         <Link
-                          className={`text-accent transition hover:text-accent/75 Rs{pathname === '/' ? active : inActive} `}
+                          className={`text-accent transition hover:text-accent/75 ${
+                            pathname === "/" ? active : inActive
+                          } `}
                           href="/"
                           onClick={toggleMobileNav}
                         >
@@ -193,21 +214,38 @@ export default function Header() {
 
                       <li>
                         <Link
-                          className={`text-accent transition hover:text-accent/75 Rs{pathname === '/products' ? active : inActive}`}
+                          className={`text-accent transition hover:text-accent/75 ${
+                            pathname === "/products" ? active : inActive
+                          }`}
                           href="/products"
                           onClick={toggleMobileNav}
                         >
                           All Products
                         </Link>
                       </li>
+                      <li>
+                        <Link
+                          className={`text-accent transition hover:text-accent/75 ${
+                            pathname === "/about" ? active : inActive
+                          }`}
+                          href="/about"
+                          onClick={toggleMobileNav}
+                        >
+                          About
+                        </Link>
+                      </li>
 
-                      {/* <li>
-                      <Link className={`text-accent transition hover:text-accent/75 Rs{pathname === '/categories' ? active : inActive}`} href="/categories"
-                        onClick={toggleMobileNav}
-                      >
-                        Categories
-                      </Link>
-                    </li> */}
+                      <li>
+                        <Link
+                          className={`text-accent transition hover:text-accent/75 ${
+                            pathname === "/contact" ? active : inActive
+                          }`}
+                          href="/contact"
+                          onClick={toggleMobileNav}
+                        >
+                          Contact Us
+                        </Link>
+                      </li>
 
                       <li>
                         {session && (
@@ -227,7 +265,9 @@ export default function Header() {
         <div className="inline-flex gap-8 p-1">
           <Link
             href={"/"}
-            className={`inline-flex items-center gap-2 rounded-md px-4 py-2 text-md text-accent hover:text-gray-700 focus:relative Rs{pathname === ('/') ? 'text-primary' : ""} `}
+            className={`inline-flex items-center gap-2 rounded-md px-4 py-2 text-md text-accent hover:text-gray-700 focus:relative ${
+              pathname === "/" ? "text-primary" : ""
+            } `}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -248,7 +288,9 @@ export default function Header() {
 
           <Link
             href={"/products"}
-            className={`inline-flex items-center gap-2 rounded-md px-4 py-2 text-md text-accent hover:text-gray-700 focus:relative Rs{pathname === ('/products') ? 'text-primary' : ""} `}
+            className={`inline-flex items-center gap-2 rounded-md px-4 py-2 text-md text-accent hover:text-gray-700 focus:relative ${
+              pathname === "/products" ? "text-primary" : ""
+            } `}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -268,8 +310,54 @@ export default function Header() {
           </Link>
 
           <Link
+            href={"/about"}
+            className={`inline-flex items-center gap-2 rounded-md px-4 py-2 text-md text-accent hover:text-gray-700 focus:relative ${
+              pathname === "/about" ? "text-primary" : ""
+            } `}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="w-4 h-4"
+            >
+              <path d="M5.223 2.25c-.497 0-.974.198-1.325.55l-1.3 1.298A3.75 3.75 0 0 0 7.5 9.75c.627.47 1.406.75 2.25.75.844 0 1.624-.28 2.25-.75.626.47 1.406.75 2.25.75.844 0 1.623-.28 2.25-.75a3.75 3.75 0 0 0 4.902-5.652l-1.3-1.299a1.875 1.875 0 0 0-1.325-.549H5.223Z" />
+              <path
+                fill-rule="evenodd"
+                d="M3 20.25v-8.755c1.42.674 3.08.673 4.5 0A5.234 5.234 0 0 0 9.75 12c.804 0 1.568-.182 2.25-.506a5.234 5.234 0 0 0 2.25.506c.804 0 1.567-.182 2.25-.506 1.42.674 3.08.675 4.5.001v8.755h.75a.75.75 0 0 1 0 1.5H2.25a.75.75 0 0 1 0-1.5H3Zm3-6a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75v3a.75.75 0 0 1-.75.75h-3a.75.75 0 0 1-.75-.75v-3Zm8.25-.75a.75.75 0 0 0-.75.75v5.25c0 .414.336.75.75.75h3a.75.75 0 0 0 .75-.75v-5.25a.75.75 0 0 0-.75-.75h-3Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            About
+          </Link>
+
+          <Link
+            href={"/contact"}
+            className={`inline-flex items-center gap-2 rounded-md px-4 py-2 text-md text-accent hover:text-gray-700 focus:relative ${
+              pathname === "/contact" ? "text-primary" : ""
+            } `}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="w-4 h-4"
+            >
+              <path d="M5.223 2.25c-.497 0-.974.198-1.325.55l-1.3 1.298A3.75 3.75 0 0 0 7.5 9.75c.627.47 1.406.75 2.25.75.844 0 1.624-.28 2.25-.75.626.47 1.406.75 2.25.75.844 0 1.623-.28 2.25-.75a3.75 3.75 0 0 0 4.902-5.652l-1.3-1.299a1.875 1.875 0 0 0-1.325-.549H5.223Z" />
+              <path
+                fill-rule="evenodd"
+                d="M3 20.25v-8.755c1.42.674 3.08.673 4.5 0A5.234 5.234 0 0 0 9.75 12c.804 0 1.568-.182 2.25-.506a5.234 5.234 0 0 0 2.25.506c.804 0 1.567-.182 2.25-.506 1.42.674 3.08.675 4.5.001v8.755h.75a.75.75 0 0 1 0 1.5H2.25a.75.75 0 0 1 0-1.5H3Zm3-6a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75v3a.75.75 0 0 1-.75.75h-3a.75.75 0 0 1-.75-.75v-3Zm8.25-.75a.75.75 0 0 0-.75.75v5.25c0 .414.336.75.75.75h3a.75.75 0 0 0 .75-.75v-5.25a.75.75 0 0 0-.75-.75h-3Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            Contact Us
+          </Link>
+
+          <Link
             href={"/cart"}
-            className={`inline-flex items-center gap-2 rounded-md  px-4 py-2 text-md   Rs{pathname === ('/cart') ? 'text-primary' : ""} `}
+            className={`inline-flex items-center gap-2 rounded-md  px-4 py-2 text-md   ${
+              pathname === "/cart" ? "text-primary" : ""
+            } `}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
